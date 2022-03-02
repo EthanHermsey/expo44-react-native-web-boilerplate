@@ -8,6 +8,7 @@
 - React reanimated v2 ( 2.4.1! )
 ---
 - Animatable for animations
+- Native-base for stylable components
 - Poppins fonts
 - Vector-icons
 - Axios to make API calls
