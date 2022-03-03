@@ -51,6 +51,6 @@
 ```npm start  /  yarn start```
 
 ### Build
-```eas build```
+```eas build``` add ```--profile preview``` for an apk
 
 !!! It's not recommended to change the entrypoint index.js ( in package.json for example ). This may break build !!!
