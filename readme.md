@@ -26,7 +26,7 @@
 ## File directory layout
 ```
 |- Src
-    |- Assets: Location for all static files.
+    |- Assets
     |- Componenten
     |- Hooks     
     |- Navigation
