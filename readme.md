@@ -8,6 +8,7 @@
 - React reanimated v2 ( 2.4.1! ) 
 
 - Animatable for animations
+- Native-base for stylable components
 - Poppins fonts
 - Vector-icons
 - Axios to make API calls
@@ -45,7 +46,7 @@
 
   
 
-It's not recommended to change the entrypoint index.js ( in package.json for example ).
+It's not recommended to change the entrypoint index.js ( in package.json for example ) !!!
   
 Use hooks
 Use index.js ( ```export { TextComponent } from './TextComponent'``` )
@@ -53,10 +54,10 @@ Use index.js ( ```export { TextComponent } from './TextComponent'``` )
   
 
 ### Install
+```npm install  /  yarn install```  
 
-```npm install  /  yarn install```
+### Run
 ```npm start  /  yarn start```
 
-
 ### Build
-```eas build```
+```eas build``` add ```--profile preview``` for an apk
