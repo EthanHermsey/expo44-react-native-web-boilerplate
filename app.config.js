@@ -6,7 +6,7 @@ export default {
     sdkVersion: "44.0.0",
     version: "1.0.0",
     orientation: "portrait",
-    icon: "./assets/icon.png",
+    icon: "./src/assets/icon.png",
     ios: {
       "bundleIdentifier": "com.rnw.boilerplate",
       "supportsTablet": true,
@@ -21,7 +21,7 @@ export default {
       "web"
     ],
     splash: {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Button, Text, StyleSheet } from "react-native";
 
 /*
@@ -8,7 +9,7 @@ Example:: Normally these pages would be put in pages/home, pages/about and pages
 */
 
 
-//pages
+//screens
 const Home = ({ navigation }) => {
     return (
         <View style={styles.center}>
@@ -33,6 +34,7 @@ const About = ({ navigation }) => {
     );
 };
 
+//this screen is seperate in drawer menu
 const Contact = () => {
     return (
         <View style={styles.center}>
@@ -42,11 +44,29 @@ const Contact = () => {
 };
 
 
+//these screens are accesible via bottom tabs
+const Chat = () => {
+    return (
+        <View style={styles.center}>
+            <Text>This is the chat screen</Text>
+        </View>
+    );
+};
+const Settings = () => {
+    return (
+        <View style={styles.center}>
+            <Text>This is the settings screen</Text>
+        </View>
+    );
+};
+
+
+
 //stack navigators
 const Stack = createNativeStackNavigator();
 const MainStackNavigator = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="About" component={About} />
         </Stack.Navigator>
@@ -71,11 +91,32 @@ const DrawerNavigator = () => {
     );
 };
 
+//tab navigation
+const Tab = createBottomTabNavigator();
+function TabNavigator() {
+    return (
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
+            <Tab.Screen name="Home" component={DrawerNavigator} />
+            <Tab.Screen name="Chat" component={Chat} />
+            <Tab.Screen name="Settings" component={Settings} />
+        </Tab.Navigator>
+    );
+}
+
+/*
+Bottom tabs
+    -> drawer(home)
+        -> home/about Stack
+        -> contact screen
+    -> chat
+    -> settings
+*/
+
 //root navigator
 const RootNavigator = () => {
     return (
         <NavigationContainer>
-            <DrawerNavigator />
+            <TabNavigator />
         </NavigationContainer>
     )
 }

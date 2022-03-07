@@ -18,16 +18,19 @@ module.exports = function(api) {
                   '.jsx',
                   '.js',
                   '.json',
+                  '.svg'
               ],
               "alias": {
-                  "assets": "./assets",
+                  "assets": "./src/assets",
                   "components": "./src/components",
                   "hooks": "./src/hooks",
                   "navigation": "./src/navigation",
-                  "pages": "./src/pages",
+                  "pages": "./src/pages",                  
+                  "providers": "./src/providers",
                   "screens": "./src/screens",
                   "store": "./src/store",
-                  "styles": "./src/styles"
+                  "styles": "./src/styles",
+                  "utils": "./src/utils"
               }
           }],
           'react-native-reanimated/plugin'

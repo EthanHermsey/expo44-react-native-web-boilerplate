@@ -8,7 +8,7 @@
                 "src/*"
             ],
             "assets/*": [
-                "./assets/*"
+                "./src/assets/*"
             ],
             "components/*": [
                 "./src/components/*"
@@ -22,6 +22,9 @@
             "pages/*": [
                 "./src/pages/*"
             ],
+            "providers/*": [
+                "./src/providers/*"
+            ],
             "screens/*": [
                 "./src/screens/*"
             ],
@@ -30,7 +33,10 @@
             ],
             "styles/*": [
                 "./src/styles/*"
-            ]
+            ],
+            "utils/*": [
+                "./src/utils/*"
+            ],
         }
     }
 }
