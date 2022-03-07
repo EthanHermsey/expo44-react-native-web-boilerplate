@@ -1,6 +1,6 @@
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context';
-import StoreProvider from 'store';
-import Navigation from 'navigation';
+import { StoreProvider } from 'providers';
+import { RootNavigator } from 'navigation';
 import { NativeBaseProvider } from 'native-base'
 
 const Root = () => {
@@ -8,7 +8,7 @@ const Root = () => {
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <StoreProvider>
                 <NativeBaseProvider>
-                    <Navigation />
+                    <RootNavigator />
                 </NativeBaseProvider>
             </StoreProvider>
         </SafeAreaProvider>

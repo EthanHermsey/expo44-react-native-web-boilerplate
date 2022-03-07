@@ -6,6 +6,16 @@ import { View, Button, Text, StyleSheet } from "react-native";
 
 /*
 Example:: Normally these pages would be put in pages/home, pages/about and pages/contact
+
+
+
+Bottom tabs
+    -> drawer(home)
+        -> home/about Stack
+        -> contact screen
+    -> chat
+    -> settings
+    
 */
 
 
@@ -44,7 +54,7 @@ const Contact = () => {
 };
 
 
-//these screens are accesible via bottom tabs
+//these screens are accessible via bottom tabs
 const Chat = () => {
     return (
         <View style={styles.center}>
@@ -103,14 +113,9 @@ function TabNavigator() {
     );
 }
 
-/*
-Bottom tabs
-    -> drawer(home)
-        -> home/about Stack
-        -> contact screen
-    -> chat
-    -> settings
-*/
+
+
+
 
 //root navigator
 const RootNavigator = () => {
