@@ -5,8 +5,8 @@
 ### This boilerplate includes:
 - Expo 44
 - React navigation ( stack / drawer / bottom tabs )
-- React reanimated v2 ( 2.4.1! ) 
-
+- React reanimated v2 ( 2.4.1! )
+- 
 - Animatable for animations
 - Native-base for stylable components
 - Poppins fonts
@@ -17,14 +17,14 @@
 - React-native-svg for displaying svg's
 - React-native-svg-charts for displaying data ( pie ) charts / circles
 - React-native-calendar-picker for a calendar component
-- Babel module resolver for resolving imports;
-    ```import { Component } from '../../components'```
-    becomes
-    ```import { Component } from 'components/Component'```
+- Babel module resolver for resolving imports;<br>
+    ```import { TextComponent } from '../../components'```<br>
+    becomes<br>
+    ```import { TextComponent } from 'components'```
 
 
 ## File directory layout
-
+```
 |- Src
     |- Assets: Location for all static files.
     |- Componenten
@@ -43,13 +43,13 @@
 |- Web
     |- index.html
     |- webstyles.css
-
+```
   
-
-It's not recommended to change the entrypoint index.js ( in package.json for example ) !!!
+<br>
+It's not recommended to change the entrypoint index.js ( in package.json for example ) as it will break the building process.
   
-Use hooks
-Use index.js ( ```export { TextComponent } from './TextComponent'``` )
+Use hooks<br>
+Use index files to export ( ```export { TextComponent } from './TextComponent'``` )
   
   
 
