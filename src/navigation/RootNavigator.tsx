@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Button, Text, StyleSheet } from "react-native";
+import { UseStyle } from 'hooks';
 
 /*
 Example:: Normally these pages would be put in pages/home, pages/about and pages/contact
@@ -21,8 +22,9 @@ Bottom tabs
 
 //screens
 const Home = ({ navigation }) => {
+    const { styles, deviceSize } = UseStyle();
     return (
-        <View style={styles.center}>
+        <View style={styles('center')}>
             <Text>This is the home screen</Text>
             <Button
                 title="Go to About Screen"
@@ -33,8 +35,9 @@ const Home = ({ navigation }) => {
 };
 
 const About = ({ navigation }) => {
+    const { styles, deviceSize } = UseStyle();
     return (
-        <View style={styles.center}>
+        <View style={styles('center')}>
             <Text>This is the about screen</Text>
             <Button
                 title="Go back to Home Screen"
@@ -46,8 +49,9 @@ const About = ({ navigation }) => {
 
 //this screen is seperate in drawer menu
 const Contact = () => {
+    const { styles, deviceSize } = UseStyle();
     return (
-        <View style={styles.center}>
+        <View style={styles('center')}>
             <Text>This is the contact screen</Text>
         </View>
     );
@@ -56,15 +60,17 @@ const Contact = () => {
 
 //these screens are accessible via bottom tabs
 const Chat = () => {
+    const { styles, deviceSize } = UseStyle();
     return (
-        <View style={styles.center}>
+        <View style={styles('center')}>
             <Text>This is the chat screen</Text>
         </View>
     );
 };
 const Settings = () => {
+    const { styles, deviceSize } = UseStyle();
     return (
-        <View style={styles.center}>
+        <View style={styles('center')}>
             <Text>This is the settings screen</Text>
         </View>
     );
@@ -126,13 +132,5 @@ const RootNavigator = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    center: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-    },
-});
 
 export default RootNavigator;
