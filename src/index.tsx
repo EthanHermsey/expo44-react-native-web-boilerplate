@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context';
+import { SafeAreaProvider, initialWindowMetrics, SafeAreaView } from 'react-native-safe-area-context';
 import { StoreProvider } from 'providers';
 import { RootNavigator } from 'navigation';
 import { NativeBaseProvider } from 'native-base'
@@ -7,11 +7,13 @@ import { NativeBaseProvider } from 'native-base'
 const Root = () => {
     return (
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-            <StoreProvider>
-                <NativeBaseProvider>
-                    <RootNavigator />
-                </NativeBaseProvider>
-            </StoreProvider>
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+                <StoreProvider>
+                    <NativeBaseProvider>
+                        <RootNavigator />
+                    </NativeBaseProvider>
+                </StoreProvider>
+            </SafeAreaView>
         </SafeAreaProvider>
     );
 }
