@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context';
 import { StoreProvider } from 'providers';
 import { RootNavigator } from 'navigation';
