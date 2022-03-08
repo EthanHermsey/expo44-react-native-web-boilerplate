@@ -14,10 +14,11 @@
 - Axios to make API calls
 - Redux for state
 - Formik + yup for forms and validation
+- rn-responsive-styling for.. responsive styling with break points ( with useStyle hook )
 - React-native-svg for displaying svg's
 - React-native-svg-charts for displaying data ( pie ) charts / circles
 - React-native-calendar-picker for a calendar component
-- Babel module resolver for resolving imports;<br>
+- Babel module resolver for resolving imports:<br>
     ```import { TextComponent } from '../../components'```<br>
     becomes<br>
     ```import { TextComponent } from 'components'```
