@@ -8,15 +8,15 @@ import { UseStyle } from 'hooks';
 /*
 Example:: Normally these pages would be put in pages/home, pages/about and pages/contact
 
-
-
 Bottom tabs
-    -> drawer(home)
-        -> home/about Stack
-        -> contact screen
-    -> chat
-    -> settings
-    
+    |-> drawer(home)
+    |    |-> Stack
+    |    |    |-> home
+    |    |    |-> about
+    |    |-> contact
+    |-> chat
+    |-> settings    
+
 */
 
 
